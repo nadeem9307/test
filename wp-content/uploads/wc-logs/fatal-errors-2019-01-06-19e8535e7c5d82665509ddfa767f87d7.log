@@ -1,0 +1,78 @@
+2019-01-06T16:59:20+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\Requests\Transport\cURL.php on line 463
+
+2019-01-06T17:02:04+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\Requests\Transport\cURL.php on line 463
+
+2019-01-06T17:02:33+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\Requests\Transport\cURL.php on line 463
+
+2019-01-06T17:02:38+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\Requests\Transport\cURL.php on line 463
+
+2019-01-06T17:02:43+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\Requests\Transport\cURL.php on line 463
+
+2019-01-06T17:02:44+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\Requests\Transport\cURL.php on line 463
+
+2019-01-06T17:02:44+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\Requests\Transport\cURL.php on line 463
+
+2019-01-06T17:02:44+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\Requests\Transport\cURL.php on line 463
+
+2019-01-06T17:02:45+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\Requests\Transport\cURL.php on line 463
+
+2019-01-06T17:03:38+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\Requests\Transport\cURL.php on line 463
+
+2019-01-06T17:07:42+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\webcom\wp-includes\wp-db.php on line 1924
+
+2019-01-06T18:21:26+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::the_title() in D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php:93
+Stack trace:
+#0 D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php(149): WC_Settings_MyPlugin->get_settings('')
+#1 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(286): WC_Settings_MyPlugin->output('')
+#2 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 D:\xampp\htdocs\webcom\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\views\html-admin-settings.php(39): do_action('woocommerce_set...')
+#5 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-settings.php(148): include('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-menus.php(251): WC_Admin_Settings::output()
+#7 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(286): WC_Admin_Menus->settings_page('') in D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php on line 93
+
+2019-01-06T18:22:04+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::the_title() in D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php:94
+Stack trace:
+#0 D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php(150): WC_Settings_MyPlugin->get_settings('')
+#1 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(286): WC_Settings_MyPlugin->output('')
+#2 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 D:\xampp\htdocs\webcom\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\views\html-admin-settings.php(39): do_action('woocommerce_set...')
+#5 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-settings.php(148): include('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-menus.php(251): WC_Admin_Settings::output()
+#7 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(286): WC_Admin_Menus->settings_page('') in D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php on line 94
+
+2019-01-06T18:24:25+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::the_title() in D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php:111
+Stack trace:
+#0 D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php(145): WC_Settings_MyPlugin->get_settings('')
+#1 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(286): WC_Settings_MyPlugin->output('')
+#2 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 D:\xampp\htdocs\webcom\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\views\html-admin-settings.php(39): do_action('woocommerce_set...')
+#5 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-settings.php(148): include('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-menus.php(251): WC_Admin_Settings::output()
+#7 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(286): WC_Admin_Menus->settings_page('' in D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php on line 111
+
+2019-01-06T18:24:37+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::the_title() in D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php:111
+Stack trace:
+#0 D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php(145): WC_Settings_MyPlugin->get_settings('')
+#1 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(286): WC_Settings_MyPlugin->output('')
+#2 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#3 D:\xampp\htdocs\webcom\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#4 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\views\html-admin-settings.php(39): do_action('woocommerce_set...')
+#5 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-settings.php(148): include('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-menus.php(251): WC_Admin_Settings::output()
+#7 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(286): WC_Admin_Menus->settings_page('' in D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php on line 111
+
+2019-01-06T18:29:57+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::the_title() in D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php:135
+Stack trace:
+#0 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(286): WC_Settings_MyPlugin->output('')
+#1 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\webcom\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\views\html-admin-settings.php(39): do_action('woocommerce_set...')
+#4 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-settings.php(148): include('D:\\xampp\\htdocs...')
+#5 D:\xampp\htdocs\webcom\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-menus.php(251): WC_Admin_Settings::output()
+#6 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(286): WC_Admin_Menus->settings_page('')
+#7 D:\xampp\htdocs\webcom\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#8 D:\xamp in D:\xampp\htdocs\webcom\wp-content\plugins\woogift\index.php on line 135
+
