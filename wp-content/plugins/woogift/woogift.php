@@ -1,4 +1,5 @@
 <?php
+
 /*
   Plugin Name: Woo Gift
   Plugin URI: no
@@ -13,6 +14,22 @@
  * */
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
+
+/**
+ * Check if WooCommerce is activated
+ */
+if (!function_exists('is_woocommerce_activated')) {
+
+    function is_woocommerce_activated() {
+        if (class_exists('woocommerce')) {
+            return true;
+        } else {
+         add_action('admin_notices', 'woogift_admin_notice__error');
+            
+        }
+    }
+
+}
 if (!class_exists('WC_Settings_WooGift')) :
 
     function woogift_add_settings() {
@@ -70,7 +87,7 @@ if (!class_exists('WC_Settings_WooGift')) :
                 $option = array();
                 foreach ($products as $product) {
                     $price = get_post_meta($product->ID, '_sale_price', true);
-                    if ($price =='49'){
+                    if ($price == '49') {
                         $option[$product->ID] = $product->post_title;
                     }
                 }
@@ -111,7 +128,7 @@ if (!class_exists('WC_Settings_WooGift')) :
             public function output() {
 
                 global $current_section;
-                
+
                 $settings = $this->get_settings($current_section);
 
                 WC_Admin_Settings::output_fields($settings);
@@ -140,28 +157,39 @@ endif;
 /*
  * Add items to cart on loading checkout page.
  */
-add_action( 'template_redirect', 'woogift_add_product_to_cart' );
+add_action('template_redirect', 'woogift_add_product_to_cart');
+
 function woogift_add_product_to_cart() {
-  if ( ! is_admin() ) {
-		global $woocommerce;
-                $product_id = get_option('woogift_product_id');// get gift product id
-		$found = false;
-		$cart_total = 100; //replace with your cart total needed to add above item
-		if ( $woocommerce->cart->total > $cart_total ) {
-			//check if product already in cart
-			if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) {
-				foreach ( $woocommerce->cart->get_cart() as $cart_item_key => $values ) {
-					$_product = $values['data'];
-					if ( $_product->get_id() == $product_id )
-						$found = true;
-				}
-				// if product not found, add it
-				if ( ! $found )
-					$woocommerce->cart->add_to_cart( $product_id );
-			} else {
-				// if no products in cart, add it
-				$woocommerce->cart->add_to_cart( 85 );
-			}
-		}
-	}
+    if (!is_admin()) {
+        global $woocommerce;
+        $product_id = get_option('woogift_product_id'); // get gift product id
+        $found = false;
+        $cart_total = 100; //replace with your cart total needed to add above item
+        if ($woocommerce->cart->total > $cart_total) {
+            //check if product already in cart
+            if (sizeof($woocommerce->cart->get_cart()) > 0) {
+                foreach ($woocommerce->cart->get_cart() as $cart_item_key => $values) {
+                    $_product = $values['data'];
+                    if ($_product->get_id() == $product_id)
+                        $found = true;
+                }
+                // if product not found, add it
+                if (!$found)
+                    $woocommerce->cart->add_to_cart($product_id);
+            } else {
+                // if no products in cart, add it
+                $woocommerce->cart->add_to_cart(85);
+            }
+        }
+    }
+}
+/**
+ * Display an error message notice in the admin if WP Job Manager is not active
+ */
+function woogift_admin_notice__error() {
+
+    $class = 'notice notice-error';
+    $message = __('An error has occurred. Woocommerce must be installed in order to use this plugin', 'webcom-text');
+
+    printf('<div class="%1$s"><p>%2$s</p></div>', esc_attr($class), esc_html($message));
 }
